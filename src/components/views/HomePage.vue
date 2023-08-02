@@ -2,52 +2,35 @@
     <div class="container py-4">
         <div class="row">
           <div class="col">
-            <div class="h-100 p-5 bg-ligth border rounded-3">
-              <h2>Pesquisar Vagas</h2>
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label>Título da vaga</label>
-                    <input type="tex" class="form-control" placeholder="pesquise por palavras chaves, por exemplo 'PHP', 'Pelno', 'Analista'">
-                    <small class="form-text text-muted"> Informe palavras que estejam relacionadas com o titulo da vaga que você proucura</small>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button class="btn btn-outline-dark mt2" type="button">Buscar</button>
-                </div>
-              </div>
-            </div>
-          </div>
+            <pesquisar-vaga>s</pesquisar-vaga>
+          </div>  
+        </div>
+
           <div class="row mt-5">
             <div class="col-4">
-              <div class="h-100 p-5 rounded-3 border bg-dark text-white">
-                <p>Vagas abertas</p>
-                <h2>25</h2>
-              </div>
+              <IndicadorVaga titulo="Vagas abertas" indicador="100"></IndicadorVaga>
             </div>
             <div class="col-4">
-              <div class="h-100 p-5 rounded-3 border bg-dark text-white">
-                <p>Profissionais cadastrados</p>
-                <h2>125</h2>
-              </div>
+              <IndicadorVaga titulo="Profissionais Cadastrados" indicador="225"></IndicadorVaga>
             </div>
             <div class="col-4">
-              <div class="h-100 p-5 rounded-3 border bg-ligth text-dark">
-                <p>Visitantes online</p>
-                <h2>15</h2>
-              </div>
+              <IndicadorVaga titulo="Visitantes online" indicador="25"></IndicadorVaga>
             </div>
           </div>
-        </div>
     </div>
   
 </template>
   
   <script>
+  import IndicadorVaga from '@/components/comuns/IndicadorVaga.vue'
+  import PesquisarVaga from '@/components/comuns/PesquisarVaga.vue'
+  
   export default {
-    name: 'HomePage'
+    name: 'HomePage',
+    components: {
+      PesquisarVaga,
+      IndicadorVaga
+    },
   }
   </script>
   
