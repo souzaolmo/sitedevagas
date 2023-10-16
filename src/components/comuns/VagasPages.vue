@@ -1,6 +1,6 @@
 <template>
          <div class="card">
-          <div class="card-header bg-dark text-white">{{  titulo }}</div>
+          <div class="card-header bg-dark text-white">{{  TituloVagateste }}</div>
           <div class="card-body">
             <p>{{ descricao }}</p>
           </div>
@@ -13,6 +13,15 @@
 <script> 
 export default {
     name: 'VagasPages',
-    props: ['titulo','descricao','salario','modalidade','tipo','publicacao']
+    //props: ['titulo','descricao','salario','modalidade','tipo','publicacao'],
+    props: {
+      tituloVagateste: String,
+      descricaoVaga: String,
+      salario: [Number,string],
+      modalidade: String,
+      tipo: String,
+      publicacao: String
+
+    }
 }
 </script>
